@@ -14,7 +14,7 @@ PIKACHU = {'id': 25, 'name': 'pikachu', 'image': None, 'types': ['electric'], 'h
 
 class ValidationTests(unittest.TestCase):
     def test_normalizes_name(self):
-        self.assertEqual(normalize_query(' Pikachu '), 'raichu')
+                self.assertEqual(normalize_query(' Pikachu '), 'pikachu')
 
     def test_rejects_invalid_queries(self):
         for value in ['', '   ', '../etc', '<script>', None, 25, 'a' * 51]:
